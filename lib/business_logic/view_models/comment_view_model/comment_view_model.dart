@@ -76,10 +76,7 @@ final FirebaseFirestore _cloudFirestore = FirebaseFirestore.instance;
         });
       }
     } catch (e) {
-      Get.snackbar(
-        'Error While Commenting',
-        e.toString(),
-      );
+     
     }
   }
 

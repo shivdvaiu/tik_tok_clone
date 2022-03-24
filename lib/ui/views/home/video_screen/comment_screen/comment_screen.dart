@@ -27,7 +27,9 @@ class _CommentScreenState extends State<CommentScreen> {
     // TODO: implement initState
     super.initState();
 
-    context.read<CommentProvider>().updatePostId(widget.id);
+  Future.delayed(Duration(seconds:2),(){
+      context.read<CommentProvider>().updatePostId(widget.id);
+  });
   }
   @override
   Widget build(BuildContext context) {
@@ -42,8 +44,7 @@ class _CommentScreenState extends State<CommentScreen> {
           child: Column(
             children: [
               Expanded(
-                child: Obx(() {
-                  return ListView.builder(
+                child: ListView.builder(
                       itemCount: commentProvider.comments.length,
                       itemBuilder: (context, index) {
                         final comment = commentProvider.comments[index];
@@ -108,8 +109,7 @@ class _CommentScreenState extends State<CommentScreen> {
                             ),
                           ),
                         );
-                      });
-                }),
+                      }),
               ),
               const Divider(),
               ListTile(

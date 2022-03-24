@@ -24,6 +24,9 @@ import 'package:tik_tok_clone/ui/views/auth/login/login.dart';
 import 'package:tik_tok_clone/ui/views/home/home.dart';
 
 void main() async {
+
+
+  
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
@@ -52,6 +55,8 @@ void main() async {
       );
     },
   ));
+
+
 }
 
 class TikTokClone extends StatelessWidget {
